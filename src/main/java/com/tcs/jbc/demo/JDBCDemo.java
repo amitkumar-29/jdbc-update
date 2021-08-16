@@ -43,7 +43,8 @@ private static void delete(Statement statement) throws SQLException {
 	statement.execute("DELETE FROM REGIONS WHERE REGION_ID=4000");
 }
 private static List<String> retrieveWithCondittion(Statement statement, String str) throws SQLException {
-	ResultSet resultSet = statement.executeQuery("SELECT * FROM REGIONS WHERE REGION_NAME LIKE '"+str+"%'");
+	 final String Query="SELECT * FROM REGIONS WHERE REGION_NAME LIKE '"+str+"%'";
+	ResultSet resultSet = statement.executeQuery(Query + " ORDER BY REGION_NAME DESC");
 
 	List<String> ls = new ArrayList<>();
 	while(resultSet.next()) {
