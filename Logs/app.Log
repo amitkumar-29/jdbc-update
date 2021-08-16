@@ -16,3 +16,10 @@
 2021-08-16 08:58:53,559 FATAL c.t.j.d.LoggingDemo [main] fatality
 2021-08-16 08:58:53,560 ERROR c.t.j.d.LoggingDemo [main] this is error
 2021-08-16 08:58:53,560 WARN c.t.j.d.LoggingDemo [main] warning
+2021-08-16 09:54:22,731 DEBUG c.t.j.d.JDBCDemo [main] id=3
+2021-08-16 09:54:22,735 DEBUG c.t.j.d.JDBCDemo [main] Asia
+2021-08-16 09:54:22,735 DEBUG c.t.j.d.JDBCDemo [main] id=2
+2021-08-16 09:54:22,735 DEBUG c.t.j.d.JDBCDemo [main] America
+2021-08-16 09:54:22,736 DEBUG c.t.j.d.JDBCDemo [main] id=1
+2021-08-16 09:54:22,736 DEBUG c.t.j.d.JDBCDemo [main] Africa
+2021-08-16 09:54:22,736 DEBUG c.t.j.d.JDBCDemo [main] 
