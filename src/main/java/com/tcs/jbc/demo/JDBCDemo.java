@@ -6,14 +6,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 public class JDBCDemo {
-public static void main(String[] args) {
-	Logger logger = LogManager.getLogger(JDBCDemo.class);
+public	static Logger logger = LoggerFactory.getLogger(JDBCDemo.class);
 
+public static void main(String[] args) {
+	logger.trace("This is my logger handler");
 	String DB_URL="jdbc:mysql://localhost/practice";
 	String DB_USER="root";
 	String DB_PASSWORD="Nuvelabs123$";
@@ -33,8 +34,8 @@ public static void main(String[] args) {
 private static void retrieve(Statement statement) throws SQLException {
 	ResultSet resultSet=statement.executeQuery("select * from regions");
 	while(resultSet.next()) {
-		System.out.println(resultSet.getInt(1));
-		System.out.println(resultSet.getNString("REGION_NAME"));
+		logger.debug(null, resultSet.getInt(1));
+		logger.debug(resultSet.getNString("REGION_NAME"));
 	}
 }
 private static void create(Statement statement) throws SQLException {
