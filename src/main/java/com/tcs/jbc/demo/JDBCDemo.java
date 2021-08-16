@@ -55,11 +55,11 @@ private static List<String> retrieveWithCondittion(Statement statement, String s
 
 	List<String> ls = new ArrayList<>();
 	while(resultSet.next()) {
-		System.out.print(resultSet.getInt(1)+" ");
-		System.out.println(resultSet.getNString("REGION_NAME"));
+		logger.debug("id={}" ,resultSet.getInt(1));
+		logger.debug(resultSet.getNString("REGION_NAME"));
 		ls.add(resultSet.getNString("REGION_NAME"));
 	}
-	System.out.println("");
+	logger.debug("");
 	return ls;
 }
 }
